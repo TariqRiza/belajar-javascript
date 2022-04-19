@@ -1,3 +1,4 @@
+// A. MEMANIPULASI ELEMEN
 // 01 element.innerHTML -> Mengbah isi HTML dari elemen 
 
 // const judul = document.getElementById('judul');
@@ -44,19 +45,63 @@
 // e. .contain() -> Mencari elemen punya class tertentu atau tidak
 // f. .replace() -> Mengganti class yang ada dengan class yang baru
 
-const p2 = document.querySelector('.p2');
-p2.classList.add('label');
+// const p2 = document.querySelector('.p2');
+// p2.classList.add('label');
 
-p2.classList.remove('label');
+// p2.classList.remove('label');
 
-p2.classList.toggle('label');
-p2.classList.toggle('biru-muda');
+// p2.classList.toggle('label');
+// p2.classList.toggle('biru-muda');
 
-p2.classList.add('satu');
-p2.classList.add('dua');
-p2.classList.add('tiga');
+// p2.classList.add('satu');
+// p2.classList.add('dua');
+// p2.classList.add('tiga');
 
-console.log(p2.classList.item(2));
-console.log(p2.classList.contains('dua'));
+// console.log(p2.classList.item(2));
+// console.log(p2.classList.contains('dua'));
 
-p2.classList.replace('tiga', 'empat');
+// p2.classList.replace('tiga', 'empat');
+
+
+
+// B. MEMANIPULASI NODE
+// 01 buat elemen baru
+const pBaru = document.createElement('p');
+// 02 buat teks untuk elemen
+const teksPBaru = document.createTextNode('Paragraf Baru');
+// simpan tulisan ke dalam paragraf
+pBaru.appendChild(teksPBaru);
+
+// 03 simpan pBaru di akhir Section A (Element Parent)
+const sectionA = document.getElementById('a');
+sectionA.appendChild(pBaru);
+
+
+// 04 Membuat elemen baru di antara elemen-elemen lain
+const liBaru = document.createElement('li');
+const teksLiBaru = document.createTextNode('Item Baru');
+liBaru.appendChild(teksLiBaru);
+
+const ul = document.querySelector('section#b ul');
+const li2 = ul.querySelector('li:nth-child(2)');
+
+ul.insertBefore(liBaru, li2);
+
+// 05 remove Node (diperlukan element parent dan element yang ingin dihapus)
+const link = document.getElementsByTagName('a')[0];
+sectionA.removeChild(link);
+
+// 06 Replace Node
+const sectionB = document.getElementById('b');
+const p4 = sectionB.querySelector('p');
+
+const h2Baru = document.createElement('h2');
+const teksH2Baru = document.createTextNode('Judul Baru');
+
+h2Baru.appendChild(teksH2Baru);
+
+sectionB.replaceChild(h2Baru, p4);
+
+pBaru.style.backgroundColor = 'lightgreen';
+liBaru.style.backgroundColor = 'lightgreen';
+h2Baru.style.backgroundColor = 'lightgreen';
