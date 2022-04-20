@@ -58,3 +58,15 @@ sBiru.addEventListener('input', function () {
     const b = sBiru.value;
     document.body.style.backgroundColor = 'rgb(' + r + ', ' + g + ', ' + b + ')';
 });
+
+
+// Kasus 4 - Merubah Warna berdasarkan Posisi Mouse
+document.body.addEventListener('mousemove', function (event) {
+    // posisi mouse
+    // console.log(event.clientX);
+    // ukuran browser
+    // console.log(window.innerWidth);
+    const xPos = Math.round((event.clientX / window.innerWidth) * 255);
+    const yPos = Math.round((event.clientY / window.innerWidth) * 255);
+    document.body.style.backgroundColor = 'rgb(' + xPos + ', ' + yPos + ', 100)';
+});
