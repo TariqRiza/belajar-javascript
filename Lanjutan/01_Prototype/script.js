@@ -152,7 +152,7 @@
 
 
 
-// Veris dalam bentuk class
+// Versi dalam bentuk class
 // class Mahasiswa {
 //     constructor(nama, energi) {
 //         this.nama = nama;
