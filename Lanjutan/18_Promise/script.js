@@ -25,25 +25,27 @@
 
 
 
-// Promise
-// Object yang merepresentasikan keberhasilan / kegagalan sebuah event 
-// yang asynchronous di masa yang akan datang
-// -> biasanya dipakai ketika mau request ke sebuah api
+/* Promise
+Object yang merepresentasikan keberhasilan / kegagalan sebuah event 
+yang asynchronous di masa yang akan datang
+-> biasanya dipakai ketika mau request ke sebuah api
 
-// Promise bagaikan sebuah janji
-// janji (terpenuhi / ingkar)
-// states (fulfilled / rejected / pending)
+Promise bagaikan sebuah janji
+janji (terpenuhi / ingkar)
+states (fulfilled / rejected / pending)
 
-// untuk menjalankan keadaan status / janji diperlukan fungsi callback
-// callback (resolve / reject / finally)
-// a) resolve -> ketika janji terpenuhi (fulfilled)
-// b) reject -> ketika janji tidak terpenuhi (rejected)
-// c) finally -> ketika waktu tunggunya selesai (baik saat status fulfilled / rejected)
+untuk menjalankan keadaan status / janji diperlukan fungsi callback
+callback (resolve / reject / finally)
+a) resolve -> ketika janji terpenuhi (fulfilled)
+b) reject -> ketika janji tidak terpenuhi (rejected)
+c) finally -> ketika waktu tunggunya selesai (baik saat status fulfilled / rejected)
 
-// aksi akan dilakukan ketika janji terpenuhi ataupun tidak terpenuhi
-// aksi (then / catch)
-// a) then -> menjalankan resolve
-// b) catch -> menjalankan reject
+aksi akan dilakukan ketika janji terpenuhi ataupun tidak terpenuhi
+aksi (then / catch)
+a) then -> menjalankan resolve
+b) catch -> menjalankan reject */
+
+
 
 
 // Contoh 1
